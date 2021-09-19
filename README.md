@@ -15,7 +15,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution URL](https://github.com/VishRoy/faq-accordion-card-main)
-- Live Site URL: [Live site URL](https://your-live-site-url.com)
+- Live Site URL: [Live site URL](https://vishroy.github.io/faq-accordion-card-main/)
 
 ## My process
 
