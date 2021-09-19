@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-image: linear-gradient(
+    to right,
+    var(--soft-violet),
+    var(--soft-blue)
+  );
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  max-width: 340px;
+  padding-bottom: 20px;
+}
+
+.card-img {
+  margin-top: -6rem;
+  border-radius: 50%;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.accordion {
+  background-color: white;
+  color: var(--very-dark-grayish-blue);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.active {
+  font-weight: bold;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.accordion:hover {
+  color: var(--soft-red);
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.panel p {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+  text-align: left;
+  line-height: 2em;
+  color: var(--dark-grayish-blue);
+}
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: '\2796';
+}
+
+@media (min-width: 700px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    max-width: 60%;
+    padding: 40px;
+  }
+
+  .card-img {
+    margin-left: -6rem;
+    border-radius: 50%;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .card-content {
+    text-align: left;
+  }
+
+  .heading {
+    padding: 15px;
+  }
+}
